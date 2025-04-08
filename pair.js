@@ -79,7 +79,7 @@ router.get('/', async (req, res) => {
                     const megaUrl = await upload(fs.createReadStream(`${dirs}/creds.json`), `${generateRandomId()}.json`);
 
                     // Add "UMAR=" prefix to the session ID
-                    let stringSession = `${megaUrl.replace('https://mega.nz/file/', 'Caseyrhodes~')}`;
+                    let stringSession = `${megaUrl.replace('https://mega.nz/file/', 'POPKID~')}`;
 
                     // Send the session ID to the target number
                     const userJid = jidNormalizedUser(num + '@s.whatsapp.net');
@@ -87,7 +87,7 @@ router.get('/', async (req, res) => {
 
                     // Send confirmation message
                     await Um4r719.sendMessage(userJid, { 
-                        text: '*Hey Dear👋*\n\n*Don’t Share Your Session ID With Anyone*\n\n*This Is CASEYRHODES-XMD👻*\n\n*THANKS FOR USING CASEYRHODES XMD BOT*\n\n*CONNECT FOR UPDATES*: https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴛᴇᴄʜ👻\n' 
+                        text: '*Hey Dear👋*\n\n*Don’t Share Your Session ID With Anyone*\n\n*This Is POPKID-XTECH👻*\n\n*THANKS FOR USING POPKID BOT*\n\n*CONNECT FOR UPDATES*: https://whatsapp.com/channel/0029VadQrNI8KMqo79BiHr3l\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘᴏᴘᴋɪᴅ ᴛᴇᴄʜ👻\n' 
                     });
 
                     // Clean up session after use
