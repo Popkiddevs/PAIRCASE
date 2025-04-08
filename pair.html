@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UMAR DEV</title>
+  <title>POPKID DEV</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
@@ -24,7 +22,7 @@
       10%, 100% { background-image: url('https://wallpapercave.com/wp/wp3764268.jpg'); }
       25% { background-image: url('https://wallpapercave.com/uwp/uwp4398200.webp'); }
       50% { background-image: url('https://wallpapercave.com/wp/KEwaPYO.jpg'); }
-      75% { background-image: url('https://wallpapercave.com/uwp/uwp4403209.jpeg'); }
+      75% { background-image: url('https://files.catbox.moe/sqylj6.jpg'); }
     }
 
     .container {
@@ -36,11 +34,11 @@
 
     .box {
       width: 300px;
-      height: 330px;
+      height: auto; /* Adjust height to accommodate the new button */
       padding: 20px;
       position: relative;
       text-align: center;
-      background-color: rgba(255,255,255,0.5);
+      background-color: red;
       border-radius: 10px;
       transform: perspective(1000px) rotateY(0deg);
       box-shadow: none; /* Removed box shadow */
@@ -124,6 +122,26 @@
     .centered-text {
       text-align: center;
     }
+
+    .music-button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px; /* Add some space above the button */
+    }
+
+    .music-button {
+      background-color: #007bff; /* Blue button */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .music-button:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -133,19 +151,25 @@
         <div id="text">
           <i class="fa fa-user"></i>
           <p>
-            <h3 class="centered-text">CASEYRHODES-XMD PAIR</h3>
+            <h3 class="centered-text">𝐏𝐎𝐏𝐊𝐈𝐃 𝐏𝐀𝐈𝐑𝐈𝐍𝐆</h3>
             <br>
-            <h2>Enter Your Number</h2>
-            <h4>Powered By CASEYRHODES TECH</h4>
+            <h2>ᴇɴᴛᴇʀ ʏᴏᴜʀ ɴᴜᴍʙᴇʀ</h2>
+            <h4>𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐏𝐎𝐏𝐊𝐈𝐃</h4>
             <br>
             <div class="input-container">
-              <input placeholder="254112192119" type="number" id="number" placeholder="Please Enter Your Number" name="">
+              <input placeholder="254732297194" type="number" id="number" placeholder="Please Enter Your Number" name="">
               <button id="submit">enter</button>
             </div>
                     <a id="waiting-message" class="centered-text" style="display: none;">in process...</a>
             <br>
             <br>
             <main id="pair"></main>
+            <div class="music-button-container">
+              <button class="music-button" onclick="toggleMusic()">
+                <i class="fas fa-music"></i> Play/Pause Music
+              </button>
+              <audio id="backgroundMusic" loop src="https://files.catbox.moe/bhj66x.m4a"></audio>
+              </div>
           </p>
         </div>
       </div>
@@ -157,6 +181,8 @@
     let b = document.getElementById("submit");
     let c = document.getElementById("number");
     let box = document.getElementById("box");
+    let backgroundMusic = document.getElementById("backgroundMusic");
+    let isPlaying = false;
 
     async function Copy() {
       let text = document.getElementById("copy").innerText;
@@ -167,7 +193,7 @@
       obj.size = "5";
       setTimeout(() => {
         obj.innerText = text;
-        obj.style = "color:black;font-weight-bold";
+        obj.style = "color:black;font-weight:bold";
         obj.size = "5";
       }, 500);
     }
@@ -202,6 +228,16 @@
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:black;font-weight:bold">' + code + '</span></font><br><br><br>';
       }
     });
+
+    function toggleMusic() {
+      if (isPlaying) {
+        backgroundMusic.pause();
+        isPlaying = false;
+      } else {
+        backgroundMusic.play();
+        isPlaying = true;
+      }
+    }
   </script>
 </body>
 </html>
