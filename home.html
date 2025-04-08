@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +12,14 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background-image: url("https://user-images.githubusercontent.com/6901805/58038897-167f0280-7ae6-11e9-94eb-88e880a25f0f.gif"); /* Set the background image */
+      background-image: url("https://files.catbox.moe/e83z0r.png"); /* Set the background image */
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
     }
-    
+
     .btn {
-      --color: rgb(238,130,238);
+      --color: red;
       --color2: #0E0E0E;
       width: 200px;
       padding: 0.8em 1.75em;
@@ -51,7 +50,7 @@
       left: 25%;
       z-index: -1;
       transition: .5s ease-out;
-      background-color: var(--color);
+      background-color: brown;
     }
 
     .btn::before {
@@ -76,15 +75,28 @@
       filter: brightness(.7);
       transform: scale(.98);
     }
+
+    .music-container {
+      margin-top: 24px; /* Add some space above the music player */
+    }
   </style>
 </head>
 <body>
 
   <button onclick="window.open(`/pair`)" class="btn">Pair</button>
-  <button onclick="window.open(`https://github.com/caseyweb/CASEYRHODES-XMD`)" class="btn">Repo</button>
-  <button onclick="window.open(`https://github.com/caseyweb`)" class="btn">GITHUB</button>
-  <button onclick="window.open(`https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E`)" class="btn">Channel</button>
-  <button onclick="window.open(`https://www.instagram.com/caseyrhodes01/`)" class="btn">instagram</button>
+  <button onclick="window.open(`https://github.com/Popkiddevs/POPKID-XTECH`)" class="btn">Repo</button>
+  <button onclick="window.open(`https://github.com/Popkiddevs`)" class="btn">GITHUB</button>
+  <button onclick="window.open(`https://whatsapp.com/channel/0029VadQrNI8KMqo79BiHr3l`)" class="btn">Channel</button>
+  <button onclick="window.open(`https://www.instagram.com/popkid_ke`)" class="btn">instagram</button>
+
+  <div class="music-container">
+    <audio id="backgroundMusic" controls autoplay loop style="width: 200px;"></audio>
+  </div>
+
+  <script>
+    // Set the source of the audio element
+    document.getElementById('backgroundMusic').src = 'https://files.catbox.moe/dr3brk.m4a';
+  </script>
 
 </body>
 </html>
