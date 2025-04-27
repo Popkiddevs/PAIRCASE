@@ -87,7 +87,7 @@ router.get('/', async (req, res) => {
 
                     // Send confirmation message
                     await Um4r719.sendMessage(userJid, { 
-                        text: '*Hey Dear👋*\n\n*Don’t Share Your Session ID With Anyone*\n\n*This Is BLACKTAPPY👻*\n\n*THANKS FOR USING BLACKTAPPY BOT*\n\n*CONNECT FOR UPDATES*: https://whatsapp.com/channel/0029VadQrNI8KMqo79BiHr3l\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘᴏᴘᴋɪᴅ ᴛᴇᴄʜ👻\n' 
+                        text: '*Hey Dear👋*\n\n*Don’t Share Your Session ID With Anyone*\n\n*This Is BLACKTAPPY👻*\n\n*THANKS FOR USING BLACKTAPPY BOT*\n\n*CONNECT FOR UPDATES*: https://whatsapp.com/channel/0029VasHgfG4tRrwjAUyTs10\n\n> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐋𝐀𝐂𝐊𝐓𝐀𝐏𝐏𝐘👻\n' 
                     });
 
                     // Clean up session after use
